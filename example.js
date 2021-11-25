@@ -1,8 +1,9 @@
 const KVM = require('./index')
 
 const exampleContract = `
-console.log('Hello World')
+function helloWorld() {
+  console.log('Hello World')
+}
 `
-
 const contract = KVM.parseContract(exampleContract)
-KVM.runContract(contract)
+console.log(contract)
